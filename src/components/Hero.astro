@@ -18,11 +18,11 @@ const instagramUrl = "https://www.instagram.com/adasntanuu11";
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    <!-- Status Indicator Bar -->
-    <div class="flex items-center justify-start mb-8 pb-4 border-b border-[#E2E8F0]/80">
+    <!-- Status Indicator Bar (Centered on Mobile, Left-aligned on Desktop) -->
+    <div class="flex items-center justify-center md:justify-start mb-8 pb-4 border-b border-[#E2E8F0]/80">
       
       <!-- Status Indicator Pill -->
-      <div class="inline-flex items-center gap-2.5 mono-label text-[#0A192F] bg-white/90 px-3.5 py-1.5 rounded-xl border border-[#E2E8F0] backdrop-blur-sm shadow-xs">
+      <div class="inline-flex items-center gap-2.5 mono-label text-[#0A192F] bg-white/90 px-3.5 py-1.5 rounded-xl border border-[#E2E8F0] backdrop-blur-sm shadow-xs mx-auto md:mx-0">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0052FF] opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-[#0052FF]"></span>
@@ -35,35 +35,35 @@ const instagramUrl = "https://www.instagram.com/adasntanuu11";
     <!-- Hero Content Grid: Left Typographic Editorial + Right Profile Frame -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
       
-      <!-- Left Column: Friendly & Professional Copy (7 cols) -->
-      <div class="lg:col-span-7 space-y-6">
+      <!-- Left Column: Friendly & Professional Copy (Center-aligned on mobile, Left-aligned on desktop) -->
+      <div class="lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
         
-        <div class="space-y-3">
+        <div class="space-y-3 w-full">
           <!-- H1 Name with Visual Weight Contrast (Outfit font-black, matching reference) -->
-          <h1 class="hero-heading text-[#0A192F] font-black tracking-[-0.04em] leading-[1.05]">
+          <h1 class="hero-heading text-[#0A192F] font-black tracking-[-0.04em] leading-[1.05] text-center md:text-left">
             <span class="font-normal text-slate-800">Nouval Adha</span>{' '}
             <span class="font-black text-[#0052FF]">Sentanu</span>
           </h1>
 
           <!-- Natural Role Subtitle (Inter 1.25rem, font-weight 500, matching reference hero-role) -->
-          <p class="text-lg sm:text-xl md:text-2xl font-medium text-[#475569] tracking-tight">
+          <p class="text-lg sm:text-xl md:text-2xl font-medium text-[#475569] tracking-tight text-center md:text-left">
             Desainer Website & UI/UX
           </p>
         </div>
 
         <!-- Editorial Paragraph (Inter 1.05rem, line-height 1.75, max-w-60ch) -->
-        <p class="body-editorial body-constrained text-[#475569] text-[1.025rem] leading-[1.75]">
+        <p class="body-editorial body-constrained text-[#475569] text-[1.025rem] leading-[1.75] text-center md:text-left mx-auto md:mx-0">
           Siswa jurusan <strong class="text-[#0A192F] font-semibold">Pengembangan Perangkat Lunak dan Gim (PPLG)</strong> yang memiliki ketertarikan besar dalam dunia coding dan desain. Fokus mempelajari pembuatan website modern, antarmuka yang ramah pengguna, serta eksplorasi karya visual 3D yang kreatif.
         </p>
 
-        <!-- Call to Action Buttons (Touch Target >= 44px) -->
-        <div class="flex flex-wrap items-center gap-3 pt-2">
+        <!-- Call to Action Buttons (Full-width stacked vertically on mobile, horizontal row on desktop) -->
+        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 pt-2 w-full max-w-md sm:max-w-none">
           
           <a
             href="#proyek"
-            class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 min-h-[44px] text-[0.95rem] font-semibold text-white bg-[#0052FF] hover:bg-[#0040CC] rounded-xl shadow-sm transition-all hover:shadow-md focus:outline-none group"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 min-h-[44px] text-[0.95rem] font-semibold text-white bg-[#0052FF] hover:bg-[#0040CC] rounded-xl shadow-sm transition-all hover:shadow-md focus:outline-none group text-center"
           >
-            <svg class="w-4 h-4 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="w-4 h-4 transition-transform group-hover:scale-110 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="7" height="7" x="3" y="3" rx="1" />
               <rect width="7" height="7" x="14" y="3" rx="1" />
               <rect width="7" height="7" x="14" y="14" rx="1" />
@@ -74,15 +74,15 @@ const instagramUrl = "https://www.instagram.com/adasntanuu11";
 
           <a
             href="#kontak"
-            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] text-[0.95rem] font-semibold text-[#0A192F] bg-white hover:bg-[#F8FAFC] border border-[#CBD5E1] hover:border-[#0052FF] rounded-xl backdrop-blur-sm shadow-sm transition-colors focus:outline-none"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] text-[0.95rem] font-semibold text-[#0A192F] bg-white hover:bg-[#F8FAFC] border border-[#CBD5E1] hover:border-[#0052FF] rounded-xl backdrop-blur-sm shadow-sm transition-colors focus:outline-none text-center"
           >
             <span>Hubungi Saya</span>
           </a>
 
         </div>
 
-        <!-- Social Media Icon Shortcuts (WhatsApp, GitHub, Instagram) — Touch Target 44px x 44px -->
-        <div class="flex items-center gap-3 pt-2">
+        <!-- Social Media Icon Shortcuts (Centered on Mobile, Left-aligned on Desktop) — Touch Target 44px x 44px -->
+        <div class="flex items-center justify-center md:justify-start gap-3 pt-2 w-full">
           <!-- WhatsApp Icon -->
           <a
             href={whatsappUrl}
@@ -126,9 +126,9 @@ const instagramUrl = "https://www.instagram.com/adasntanuu11";
 
       </div>
 
-      <!-- Right Column: Nouval's Real Photo in Clean Frame (5 cols) -->
-      <div class="lg:col-span-5 flex justify-center lg:justify-end">
-        <div class="relative w-full max-w-[340px]">
+      <!-- Right Column: Nouval's Real Photo in Clean Frame (Below icons on mobile, Centered on mobile, Right-aligned on desktop) -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end w-full pt-4 lg:pt-0">
+        <div class="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[340px] mx-auto lg:mr-0">
           
           <!-- Clean Profile Image Card with Dimensional Soft Shadow & Glow -->
           <div class="interactive-card p-3.5 rounded-2xl">
