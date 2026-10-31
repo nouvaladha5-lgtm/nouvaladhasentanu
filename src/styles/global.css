@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #f8fafc;
+    --bg-surface: rgba(255, 255, 255, 0.88);
+    --text-primary: #0a192f;
+    --text-secondary: #475569;
+    --accent: #0052ff;
+    --accent-light: #93c5fd;
+    --border-line: #e2e8f0;
+    --dot-color: #cbd5e1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    overflow-x: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #0a192f;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #0a192f;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings Typography: Outfit Display Font (Identik dengan Referensi ghaniyfadhilaltaf.my.id) */
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', sans-serif;
+    color: #0a192f;
+  }
+
+  /* Hero Title (H1) */
+  h1, .hero-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+
+  /* Section Headings (H2) */
+  h2, .section-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.85rem, 5vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+  }
+
+  /* Card Headings (H3) */
+  h3, .card-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+
+  /* Body Paragraphs: Inter Regular 400 with line-height 1.7 */
+  p, .body-editorial {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #475569;
+  }
+
+  /* Navigation & Buttons */
+  nav a, .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  button, .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  ::selection {
+    background-color: #0052ff;
+    color: #ffffff;
+  }
+}
+
+/* Micro-Typography Classes (Inter 0.8rem, 600, uppercase) */
+.mono-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Tag / Chip / Badge (Inter 0.75rem, 500) */
+.mono-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.body-constrained {
+  max-width: 60ch;
+}
+
+/* Surface Layering (Glass / Pure White Translucent Card) */
+.surface-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(10, 25, 47, 0.05), 0 2px 6px -1px rgba(10, 25, 47, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.surface-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 82, 255, 0.45);
+  box-shadow: 0 16px 36px -6px rgba(0, 82, 255, 0.12), 0 0 24px rgba(0, 82, 255, 0.08);
+}
+
+/* Enhanced Dimensional Card Box with Soft Shadow & Glowing Lift */
+.interactive-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(10, 25, 47, 0.05), 0 2px 6px -1px rgba(10, 25, 47, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 82, 255, 0.5);
+  box-shadow: 0 16px 36px -6px rgba(0, 82, 255, 0.14), 0 0 24px rgba(0, 82, 255, 0.08);
+}
+
+/* Interactive Floating Tooltip / Card Box with Subtle Glow & Depth */
+.interactive-tooltip {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 8px 24px -4px rgba(10, 25, 47, 0.08), 0 2px 8px -1px rgba(10, 25, 47, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.interactive-tooltip:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(0, 82, 255, 0.6);
+  box-shadow: 0 16px 32px -4px rgba(0, 82, 255, 0.16), 0 0 22px rgba(0, 82, 255, 0.12);
+}
+
+/* Masked Technical Dot Pattern (Fades softly toward screen edges) */
+.masked-dot-grid {
+  background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* Futuristic Tech Frame for Profile Image */
+.futuristic-frame {
+  position: relative;
+  border: 1px solid rgba(0, 82, 255, 0.8);
+  border-radius: 16px;
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(0, 82, 255, 0.08), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 6px 24px -4px rgba(0, 82, 255, 0.15), 0 2px 8px -1px rgba(10, 25, 47, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.futuristic-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px -6px rgba(0, 82, 255, 0.22), 0 0 28px rgba(0, 82, 255, 0.12);
+}
+
+.futuristic-frame::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #0052ff;
+  border-left: 2px solid #0052ff;
+}
+
+.futuristic-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #0052ff;
+  border-right: 2px solid #0052ff;
+}
+
+/* Project Card Showcase */
+.project-card {
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px -2px rgba(10, 25, 47, 0.05), 0 2px 6px -1px rgba(10, 25, 47, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(0, 82, 255, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px -6px rgba(0, 82, 255, 0.14), 0 0 24px rgba(0, 82, 255, 0.08);
+}
+
+/* Technical Crosshair Marker (+) */
+.crosshair-corner {
+  position: absolute;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #93c5fd;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Scroll Fade-Up Animation */
+.fade-up-element {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating Badge Animation */
+@keyframes floatingBadge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.floating-badge {
+  animation: floatingBadge 3.5s ease-in-out infinite;
+}
+
+.floating-badge:hover {
+  animation-play-state: paused;
+}
+
+/* Particle Network Canvas */
+#hero-particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}

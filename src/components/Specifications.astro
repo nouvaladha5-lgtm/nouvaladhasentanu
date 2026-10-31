@@ -1,0 +1,81 @@
+---
+// Specifications.astro (Nouval Adha Sentanu — Tech Stack & Keahlian Ringkas & Bersih)
+
+interface SkillCategory {
+  title: string;
+  badge: string;
+  skills: string[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: 'Pemrograman & Web Development',
+    badge: 'Web Dev',
+    skills: ['JavaScript', 'Reactjs / Next.js', 'Tailwind CSS', 'HTML5 & CSS3']
+  },
+  {
+    title: 'Desain Grafis & Kreatif',
+    badge: 'Desain',
+    skills: ['Canva', 'CapCut', 'Figma', 'PixelLab']
+  },
+  {
+    title: 'Alat Kerja & Sikap Pembelajar',
+    badge: 'PPLG',
+    skills: ['Git & GitHub', 'VS Code', 'Rekayasa Perangkat Lunak', 'Semangat Belajar']
+  }
+];
+---
+
+<section id="keahlian" class="py-20 sm:py-28 border-b border-[#E2E8F0] relative">
+  
+  <!-- Architectural Corner Crosshairs (+) -->
+  <span class="crosshair-corner top-0 left-4 sm:left-8 -translate-y-1/2">+</span>
+  <span class="crosshair-corner top-0 right-4 sm:right-8 -translate-y-1/2">+</span>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    
+    <!-- Section Identifier Header -->
+    <div class="mb-12 fade-up-element">
+      <div class="inline-flex items-center gap-2 mono-label text-[#0052FF] font-semibold mb-2 bg-blue-50/80 px-2.5 py-1 rounded-lg border border-blue-200 text-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#0052FF]"></span>
+        <span>Tech Stack & Keahlian</span>
+      </div>
+      <h2 class="section-heading text-3xl sm:text-4xl font-semibold text-[#0A192F]">
+        Tech Stack & Keahlian
+      </h2>
+      <p class="body-editorial body-constrained mt-2 text-sm sm:text-base text-[#475569]">
+        Teknologi dan tools yang saya gunakan dalam mengembangkan berbagai proyek digital.
+      </p>
+    </div>
+
+    <!-- 3-Column Spec Ledger with Dimensional Soft Shadow & Glow -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {skillCategories.map((cat) => (
+        <div class="interactive-card rounded-2xl flex flex-col justify-between overflow-hidden fade-up-element">
+          
+          <div>
+            <!-- Header Group -->
+            <div class="p-4.5 bg-[#F8FAFC] border-b border-[#E2E8F0] flex items-center justify-between">
+              <span class="font-heading font-bold text-xs text-[#0A192F] uppercase">{cat.title}</span>
+              <span class="mono-label text-[#0052FF] font-semibold text-xs bg-blue-50 px-2.5 py-0.5 rounded-lg border border-blue-200">
+                {cat.badge}
+              </span>
+            </div>
+
+            <!-- Ringkas: Skill Badges / Chips Saja (Tanpa Deskripsi Panjang) -->
+            <div class="p-5 flex flex-wrap gap-2.5">
+              {cat.skills.map((skill) => (
+                <div class="inline-flex items-center gap-2 px-3.5 py-2 bg-[#F8FAFC] hover:bg-blue-50/70 border border-[#E2E8F0] hover:border-[#0052FF] rounded-xl text-xs sm:text-sm font-semibold text-[#0A192F] hover:text-[#0052FF] transition-all shadow-xs group cursor-default">
+                  <span class="w-2 h-2 rounded-full bg-[#0052FF] group-hover:scale-125 transition-transform shrink-0"></span>
+                  <span>{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

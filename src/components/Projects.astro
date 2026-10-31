@@ -1,0 +1,346 @@
+---
+// Projects.astro (Nouval Adha Sentanu — Karya & Proyek dengan Galeri Desain Rapi)
+
+interface DesignItem {
+  title: string;
+  category: string;
+  image: string;
+}
+
+const designWorks: DesignItem[] = [
+  {
+    title: 'Desain UI Mobile (Login & Register)',
+    category: 'UI/UX Design • Figma',
+    image: '/projects/design1.jpeg'
+  },
+  {
+    title: 'Desain Media Edukatif IoT (Ayo Mainkan)',
+    category: 'Media Edukatif • Desain Grafis',
+    image: '/projects/design 5.jpeg'
+  },
+  {
+    title: 'Poster Tipografi "Kopi Hari Ini"',
+    category: 'Poster & Desain Grafis',
+    image: '/projects/design6.jpeg'
+  },
+  {
+    title: 'Eksplorasi Grafis & Ilustrasi Kreatif',
+    category: 'Visual & Graphic Design',
+    image: '/projects/design4.jpeg'
+  }
+];
+---
+
+<section id="proyek" class="py-20 sm:py-28 border-b border-[#E2E8F0] relative">
+  
+  <!-- Architectural Corner Crosshairs (+) -->
+  <span class="crosshair-corner top-0 left-4 sm:left-8 -translate-y-1/2">+</span>
+  <span class="crosshair-corner top-0 right-4 sm:right-8 -translate-y-1/2">+</span>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    
+    <!-- Section Identifier Header -->
+    <div class="mb-12 pb-6 border-b border-[#E2E8F0] fade-up-element">
+      <div>
+        <div class="inline-flex items-center gap-2 mono-label text-[#0052FF] font-semibold mb-2 bg-blue-50/80 px-2.5 py-1 rounded-lg border border-blue-200 text-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#0052FF]"></span>
+          <span>Karya & Proyek</span>
+        </div>
+        <h2 class="section-heading text-3xl sm:text-4xl font-semibold text-[#0A192F]">
+          Karya dan Proyek Terbaru
+        </h2>
+      </div>
+    </div>
+
+    <div class="space-y-12">
+      
+      <!-- ==================== PROYEK 1: TO-DO LIST ==================== -->
+      <article class="project-card fade-up-element p-6 sm:p-8 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Image -->
+          <div class="lg:col-span-6">
+            <div class="relative w-full aspect-[16/10] bg-[#F1F5F9] rounded-xl overflow-hidden border border-[#E2E8F0] group">
+              <img
+                src="/projects/todo.jpeg"
+                alt="Website To-Do List"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute top-2 left-2 px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-lg mono-label text-[#0A192F] font-semibold text-xs border border-[#E2E8F0]">
+                Aplikasi Web
+              </div>
+              <div class="absolute bottom-2 right-2 px-2.5 py-0.5 bg-[#0052FF] text-white rounded-lg mono-label font-bold text-[10px]">
+                Selesai
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="lg:col-span-6 space-y-4">
+            <div class="flex items-center justify-between mono-label text-[#64748B] text-xs pb-2 border-b border-[#E2E8F0]">
+              <span class="text-[#0052FF] font-bold">Proyek 01</span>
+              <span class="bg-blue-50 text-[#0052FF] px-2 py-0.5 rounded-lg border border-blue-200 text-[11px] font-semibold">
+                Web Development
+              </span>
+            </div>
+
+            <h3 class="card-heading text-2xl sm:text-3xl font-semibold text-[#0A192F]">
+              Website To-Do List
+            </h3>
+
+            <p class="body-editorial text-sm sm:text-base leading-relaxed text-[#475569]">
+              Website To-Do List adalah sebuah aplikasi berbasis web yang digunakan untuk mencatat, mengatur, dan mengelola daftar kegiatan atau tugas sehari-hari. Website ini membantu pengguna agar lebih mudah mengingat tugas yang harus diselesaikan, menandai tugas yang sudah selesai, serta mengatur aktivitas agar lebih terorganisir dan produktif.
+            </p>
+
+            <div class="pt-2">
+              <div class="mono-label text-[#64748B] mb-2 text-xs font-semibold">
+                TEKNOLOGI & FITUR:
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                {['JavaScript', 'HTML5', 'Tailwind CSS', 'LocalStorage', 'Desain Responsif'].map((tag) => (
+                  <span class="mono-tag px-3 py-1 text-xs border border-[#E2E8F0] rounded-xl bg-white text-[#0A192F] shadow-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-[#E2E8F0] flex items-center justify-end text-xs">
+              <a
+                href="https://github.com/nouvaladha5-lgtm"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-[#0052FF] font-bold hover:underline mono-label"
+              >
+                <span>Lihat Kode di GitHub</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ==================== PROYEK 2: 3D BLENDER ==================== -->
+      <article class="project-card fade-up-element p-6 sm:p-8 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Image -->
+          <div class="lg:col-span-6">
+            <div class="relative w-full aspect-[16/10] bg-[#F1F5F9] rounded-xl overflow-hidden border border-[#E2E8F0] group">
+              <img
+                src="/projects/blender-3d.jpeg"
+                alt="Pemodelan 3D Meja dan Kursi di Blender"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute top-2 left-2 px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-lg mono-label text-[#0A192F] font-semibold text-xs border border-[#E2E8F0]">
+                Pemodelan 3D
+              </div>
+              <div class="absolute bottom-2 right-2 px-2.5 py-0.5 bg-[#0052FF] text-white rounded-lg mono-label font-bold text-[10px]">
+                3D Asset
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="lg:col-span-6 space-y-4">
+            <div class="flex items-center justify-between mono-label text-[#64748B] text-xs pb-2 border-b border-[#E2E8F0]">
+              <span class="text-[#0052FF] font-bold">Proyek 02</span>
+              <span class="bg-blue-50 text-[#0052FF] px-2 py-0.5 rounded-lg border border-blue-200 text-[11px] font-semibold">
+                Blender 3D Modeling
+              </span>
+            </div>
+
+            <h3 class="card-heading text-2xl sm:text-3xl font-semibold text-[#0A192F]">
+              Pemodelan 3D Meja & Kursi
+            </h3>
+
+            <p class="body-editorial text-sm sm:text-base leading-relaxed text-[#475569]">
+              Pembuatan meja dan kursi 3D menggunakan aplikasi Blender dengan bantuan AI untuk mendapatkan ide, referensi, serta panduan dalam proses modeling. Dalam proyek ini, saya belajar membuat objek 3D, mengatur bentuk dan ukuran, menambahkan detail, serta memberikan warna dan material agar hasil desain terlihat lebih menarik dan realistis.
+            </p>
+
+            <div class="pt-2">
+              <div class="mono-label text-[#64748B] mb-2 text-xs font-semibold">
+                ALAT & TEKNIK:
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                {['Blender 3D', 'Poly Modeling', 'Material & Shader', 'Pencahayaan', 'Referensi AI'].map((tag) => (
+                  <span class="mono-tag px-3 py-1 text-xs border border-[#E2E8F0] rounded-xl bg-white text-[#0A192F] shadow-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-[#E2E8F0] flex items-center justify-end text-xs">
+              <span class="text-[#0052FF] font-semibold mono-label">Aset Model 3D</span>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ==================== PROYEK 3: DESAIN GRAFIS & UI (OVERHAULED & VISIBLE) ==================== -->
+      <article class="project-card fade-up-element p-6 sm:p-8 overflow-hidden">
+        
+        <!-- Header & Description -->
+        <div class="space-y-4 mb-8">
+          <div class="flex items-center justify-between mono-label text-[#64748B] text-xs pb-2 border-b border-[#E2E8F0]">
+            <span class="text-[#0052FF] font-bold">Proyek 03</span>
+            <span class="bg-blue-50 text-[#0052FF] px-2.5 py-0.5 rounded-lg border border-blue-200 text-[11px] font-semibold">
+              Koleksi Desain UI/UX & Grafis
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-8 space-y-2">
+              <h3 class="card-heading text-2xl sm:text-3xl font-semibold text-[#0A192F]">
+                Karya Desain Grafis & Antarmuka
+              </h3>
+              <p class="body-editorial text-sm sm:text-base leading-relaxed text-[#475569]">
+                Proyek ini merupakan hasil karya desain yang dibuat untuk mengembangkan kreativitas, kemampuan visual, dan keterampilan dalam menggunakan aplikasi desain. Proses pengerjaan meliputi perencanaan konsep, pemilihan warna, pengaturan tata letak, serta pembuatan elemen visual agar menghasilkan desain yang menarik, rapi, dan mudah dipahami.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 space-y-2 lg:text-right">
+              <div class="mono-label text-[#64748B] text-xs font-semibold">
+                FOKUS & INSTRUMEN:
+              </div>
+              <div class="flex flex-wrap lg:justify-end gap-1.5">
+                {['Figma', 'UI/UX Design', 'Tata Letak', 'Teori Warna', 'Tipografi'].map((tag) => (
+                  <span class="mono-tag px-3 py-1 text-xs border border-[#E2E8F0] rounded-xl bg-white text-[#0A192F] shadow-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW NEAT & CLEAR DESIGN SHOWCASE GALLERY GRID -->
+        <div class="pt-4 border-t border-[#E2E8F0]">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="font-heading font-semibold text-base text-[#0A192F] flex items-center gap-2">
+              <span class="w-2 h-2 bg-[#0052FF] rounded-full"></span>
+              <span>Galeri Hasil Desain (Tampilan Utuh & Rapi)</span>
+            </h4>
+            <span class="mono-label text-xs text-[#0052FF] font-semibold bg-blue-50 px-2.5 py-0.5 rounded-lg border border-blue-200">
+              Desain Grafis & UI/UX
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {designWorks.map((work, index) => (
+              <div class="interactive-card rounded-2xl overflow-hidden flex flex-col group">
+                
+                <!-- Image Container with aspect-[3/4] & object-contain: Displays Entire Design Intact -->
+                <div class="relative aspect-[3/4] bg-[#F8FAFC] border-b border-[#E2E8F0] p-3 flex items-center justify-center overflow-hidden cursor-pointer design-image-trigger" data-img-src={work.image} data-img-title={work.title}>
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300 drop-shadow-xs"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <!-- Number Badge -->
+                  <div class="absolute top-2 left-2 px-2.5 py-0.5 bg-white/95 backdrop-blur-sm rounded-lg mono-label text-[10px] font-bold text-[#0A192F] border border-[#E2E8F0] shadow-xs">
+                    0{index + 1}
+                  </div>
+                </div>
+
+                <!-- Caption / Info -->
+                <div class="p-3.5 bg-white flex-1 flex flex-col justify-between">
+                  <div>
+                    <span class="mono-label text-[10px] text-[#0052FF] font-semibold block mb-0.5">
+                      {work.category}
+                    </span>
+                    <h5 class="font-heading font-semibold text-xs text-[#0A192F] line-clamp-2">
+                      {work.title}
+                    </h5>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-[#E2E8F0] flex items-center justify-end text-xs mono-label text-[#64748B]">
+          <span class="text-[#0052FF] font-semibold">Koleksi Desain Grafis & UI/UX</span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+  <!-- Interactive Lightbox Modal for Full-Resolution Image Inspection -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-[#0A192F]/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-white rounded-2xl border border-[#CBD5E1] p-5 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-[#E2E8F0]">
+        <h4 id="modal-title" class="font-heading font-semibold text-sm sm:text-base text-[#0A192F]">Judul Gambar</h4>
+        <button
+          type="button"
+          id="close-modal-btn"
+          class="px-3 py-1.5 text-xs mono-label font-bold text-[#0A192F] bg-[#F1F5F9] hover:bg-[#E2E8F0] rounded-xl transition-colors"
+        >
+          Tutup [Esc]
+        </button>
+      </div>
+      <div class="max-h-[75vh] overflow-auto flex items-center justify-center bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-3">
+        <img id="modal-image" src="" alt="" class="max-h-[70vh] w-auto object-contain rounded-lg" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  function setupDesignLightbox() {
+    const triggers = document.querySelectorAll('.design-image-trigger');
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image') as HTMLImageElement;
+    const modalTitle = document.getElementById('modal-title');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    if (!modal || !modalImg || !modalTitle || !closeBtn) return;
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const src = trigger.getAttribute('data-img-src') || '';
+        const title = trigger.getAttribute('data-img-title') || '';
+        modalImg.src = src;
+        modalImg.alt = title;
+        modalTitle.textContent = title;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  }
+
+  setupDesignLightbox();
+  document.addEventListener('astro:after-swap', setupDesignLightbox);
+</script>

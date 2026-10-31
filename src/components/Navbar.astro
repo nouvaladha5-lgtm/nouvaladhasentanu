@@ -1,0 +1,143 @@
+---
+// Navbar.astro (Nouval Adha Sentanu — Navigasi Bersih & Logo N Minimalis)
+const navLinks = [
+  { label: 'Tentang', href: '#profil' },
+  { label: 'Karya & Proyek', href: '#proyek' },
+  { label: 'Keahlian', href: '#keahlian' },
+  { label: 'Kontak', href: '#kontak' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] transition-all">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Left: Logo "N" Minimalis Futuristik & Brand "nouval" -->
+      <a href="#hero" class="nav-scroll-link flex items-center gap-2.5 group text-[#0A192F] focus:outline-none min-h-[44px]" aria-label="Beranda Nouval">
+        <!-- Futuristic Minimalist "N" Logo Badge -->
+        <div class="w-9 h-9 rounded-xl bg-[#0052FF] text-white flex items-center justify-center shadow-xs group-hover:bg-[#0040CC] group-hover:scale-105 transition-all">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 4.5V19.5" />
+            <path d="M6 6.5L18 17.5" />
+            <path d="M18 4.5V19.5" />
+          </svg>
+        </div>
+        <span class="font-heading text-xl font-extrabold tracking-tight text-[#0A192F] group-hover:text-[#0052FF] transition-colors">
+          Nouval
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links (Inter 0.9rem, font-weight 500) -->
+      <nav class="hidden md:flex items-center gap-7" aria-label="Navigasi Utama">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="nav-scroll-link nav-link text-[0.9rem] font-medium text-[#475569] hover:text-[#0052FF] transition-colors py-2 focus:outline-none focus:text-[#0052FF]"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Desktop Right Action (Touch target min-40px) -->
+      <div class="hidden md:flex items-center gap-4">
+        <a
+          href="#kontak"
+          class="nav-scroll-link inline-flex items-center justify-center gap-2 px-4 py-2 min-h-[40px] text-[0.9rem] font-semibold text-white bg-[#0052FF] hover:bg-[#0040CC] rounded-xl shadow-sm transition-all hover:shadow-md focus:outline-none"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          <span>Hubungi Saya</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button (Touch Target 44px x 44px) -->
+      <div class="flex items-center md:hidden">
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Buka menu navigasi"
+          class="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 border border-[#E2E8F0] rounded-xl text-[#0A192F] hover:bg-[#F8FAFC] transition-colors focus:outline-none"
+        >
+          <svg id="menu-icon-bars" class="w-5 h-5 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-[#E2E8F0] bg-white/98 backdrop-blur-md px-4 py-3 space-y-2 shadow-lg rounded-b-2xl"
+  >
+    {navLinks.map((link) => (
+      <a
+        href={link.href}
+        class="nav-scroll-link mobile-link flex items-center justify-between py-3 px-3 min-h-[44px] text-[0.95rem] font-medium text-[#0A192F] hover:bg-[#F8FAFC] hover:text-[#0052FF] rounded-xl border-b border-[#F1F5F9] transition-colors"
+      >
+        <span>{link.label}</span>
+        <span class="text-[#0052FF]">→</span>
+      </a>
+    ))}
+    <div class="pt-2">
+      <a
+        href="#kontak"
+        class="nav-scroll-link mobile-link w-full flex items-center justify-center gap-2 py-3 px-4 min-h-[44px] text-[0.95rem] font-semibold text-white bg-[#0052FF] rounded-xl"
+      >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        <span>Hubungi Saya</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  function setupNav() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconBars = document.getElementById('menu-icon-bars');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    if (btn && menu && iconBars && iconClose) {
+      btn.addEventListener('click', () => {
+        const isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          menu.classList.add('hidden');
+          iconBars.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.classList.remove('hidden');
+          iconBars.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Close mobile menu on link click
+      const mobileLinks = menu.querySelectorAll('.mobile-link');
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+          iconBars.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  }
+
+  setupNav();
+  document.addEventListener('astro:after-swap', setupNav);
+</script>
